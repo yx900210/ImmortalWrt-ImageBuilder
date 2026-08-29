@@ -216,4 +216,10 @@ else
     echo "未检测到 Docker，跳过防火墙配置。"
 fi
 
+# 设置默认Argon主题
+uci set luci.main.mediaurlbase='/luci-static/argon'
+# 设置默认简体中文
+uci set luci.main.lang='zh_cn'
+uci commit luci
+
 exit 0
